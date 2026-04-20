@@ -288,6 +288,6 @@ input[type="search"]:focus-visible{
 
     .wrapper .container .middle .icon a:hover,
     .wrapper .container .middle .icon a:focus-visible{
-        animation: gentle-float 900ms ease-in-out 1;
+        animation: gentle-float 900ms ease-in-out;
     }
 }
