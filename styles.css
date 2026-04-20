@@ -53,7 +53,6 @@ svg{
     box-shadow: 1rem 1rem 1rem var(--shadow-dark-color);
     padding: clamp(1.2rem, 3vw, 3rem);
     transition: all 300ms ease;
-    animation: fade-in-up 700ms ease both;
 
 }
 
@@ -192,11 +191,6 @@ svg{
 .wrapper .container .middle .icon a:hover{
     box-shadow:  var(--box-shadow);
     transform: translateY(-3px);
-    animation: gentle-float 4s ease-in-out infinite;
-}
-
-.wrapper .container .middle .icon a:focus-visible{
-    animation: gentle-float 4s ease-in-out infinite;
 }
 
 /****** BOTTOM ******/
@@ -284,5 +278,16 @@ input[type="search"]:focus-visible{
     *{
         animation: none !important;
         transition: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference){
+    .wrapper{
+        animation: fade-in-up 700ms ease both;
+    }
+
+    .wrapper .container .middle .icon a:hover,
+    .wrapper .container .middle .icon a:focus-visible{
+        animation: gentle-float 900ms ease-in-out 1;
     }
 }
